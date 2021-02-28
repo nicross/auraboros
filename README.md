@@ -40,3 +40,12 @@ gulp electron-build
 | Flag | Description |
 | - | - |
 | `--debug` | Suppresses minification. |
+
+## Credits
+These fonts are free for noncommercial use and not covered by the license of this project:
+
+- **Fira Mono** by Mozilla
+- **Revolver Blackletter** by Eduardo Aire Torres
+- **Timeless** by Manfred Klein
+
+Thanks for playing!
