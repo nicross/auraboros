@@ -10,6 +10,7 @@ const merge = require('merge-stream')
 const package = require('./package.json')
 const packager = require('electron-packager')
 const rename = require('gulp-rename')
+const serve = require('gulp-serve')
 const uglify = require('gulp-uglify-es').default
 const zip = require('gulp-zip')
 
@@ -122,9 +123,15 @@ gulp.task('electron', () => {
 
 gulp.task('electron-build', gulp.series('build', 'electron'))
 
+gulp.task('serve', serve({
+  root: 'public',
+}))
+
 gulp.task('watch', () => {
   gulp.watch('src/**', gulp.series('build'))
 })
+
+gulp.task('dev', gulp.parallel('serve', 'watch'))
 
 function getCss() {
   const srcs = [
